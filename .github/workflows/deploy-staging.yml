@@ -109,6 +109,9 @@ jobs:
         run: |
           sed -i.bak "/path: \`${__dirname}\/content\`,\s*$/a \ \ \ \ \ \ \ \ ignore: [\`**/*.zip\`, \`**/*.mp4\`, \`**/*.pdf\`, \`**/*.gif\`]," gatsby-config.js
 
+      - name: Verify Gatsby Config
+        run: cat gatsby-config.js
+
       - name: Build
         run: npm run build
 
